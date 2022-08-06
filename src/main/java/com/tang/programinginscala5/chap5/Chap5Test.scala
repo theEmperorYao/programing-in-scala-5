@@ -2,6 +2,8 @@ package com.tang.programinginscala5.chap5
 
 import scala.language.postfixOps
 
+import com.tang.programinginscala5.chap6.Rational
+
 /**
  * @Classname StringTest
  * @Description TODO
