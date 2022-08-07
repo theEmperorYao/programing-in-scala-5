@@ -1,5 +1,7 @@
 package com.tang.programinginscala5.chap6
 
+import org.springframework.stereotype.Component
+
 /**
  * @Classname Chap6Test
  * @Description TODO
@@ -20,6 +22,7 @@ extension (x: Int)
  * @param n 类参数
  * @param d
  */
+@Component
 class Rational(n: Int, d: Int):
   //会将在类定义体中给出的非字段或方法定义的代码编译进主构造方法中
   //  println("Created " + n + "/" + d)
@@ -37,6 +40,8 @@ class Rational(n: Int, d: Int):
 
   // 主构方法是类的唯一入口
   def this(n: Int) = this(n, 1)
+
+  def this() = this(1, 1)
 
   override def toString: String = s"$number/$denom"
 
