@@ -48,7 +48,6 @@ object Chap716Test {
     val tableSwq =
       for row <- 1 to 10 yield
         makeRow(row)
-
     tableSwq.mkString("\n")
 
 }
