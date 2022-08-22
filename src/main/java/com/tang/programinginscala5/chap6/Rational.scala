@@ -39,7 +39,7 @@ class Rational(n: Int, d: Int):
 
 
   // 主构方法是类的唯一入口
-  def this(n: Int) = this(n, 1)
+  //  def this(n: Int) = this(n, 1)
 
   def this() = this(1, 1)
 
@@ -80,7 +80,11 @@ class Rational(n: Int, d: Int):
 
   def /(i: Int) = Rational(number, i * denom)
 
+
 object Rational:
+
+  def apply(number: Int, denom: Int = 1) = new Rational(number, denom)
+
   def main(args: Array[String]): Unit =
     val a = new Rational(1, 2)
     println(a)
