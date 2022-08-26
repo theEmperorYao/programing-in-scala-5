@@ -1,5 +1,7 @@
 package com.tang.programinginscala5.chap8
 
+import org.springframework.stereotype.Component
+
 /**
  * @Classname Padding
  * @Description
@@ -7,7 +9,6 @@ package com.tang.programinginscala5.chap8
  * @Author by tangyao
  */
 object Padding:
-
   def padLines(text: String, minWidth: Int): String =
     val paddedLines: Iterator[String] =
       for line <- text.linesIterator yield
