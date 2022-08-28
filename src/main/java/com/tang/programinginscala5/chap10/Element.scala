@@ -63,6 +63,8 @@ class UniformElement(ch: Char, override val width: Int, override val height: Int
   override def contents: Vector[String] = Vector.fill(height)(line)
 
 
+
+
 object UniformElement {
   def main(args: Array[String]): Unit = {
     val element: Element = UniformElement('x', 3, 4)
