@@ -1,4 +1,4 @@
-package com.tang.pragmaticscala.chap1
+package com.tang.pragmaticscala
 
 object DoubleValue {
 
