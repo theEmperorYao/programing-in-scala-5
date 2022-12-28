@@ -1,6 +1,5 @@
 package com.tang.programinginscala5.chap6
 
-import org.springframework.stereotype.Component
 
 /**
  * @Classname Chap6Test
@@ -22,8 +21,12 @@ extension (x: Int)
  * @param n 类参数
  * @param d
  */
-@Component
-class Rational(n: Int, d: Int):
+class Rational(n: Int, d: Int) extends Ordered[Rational] :
+
+  override def compare(that: Rational): Int =
+    (this.number * that.denom) - (that.number * this.denom)
+
+
   //会将在类定义体中给出的非字段或方法定义的代码编译进主构造方法中
   //  println("Created " + n + "/" + d)
 
@@ -36,6 +39,7 @@ class Rational(n: Int, d: Int):
   // 所以通过that.n 访问不到(猜测是不是已经超出作用域了)
   val number: Int = n / g
   val denom: Int = d / g
+
 
 
   // 主构方法是类的唯一入口
@@ -118,6 +122,16 @@ object Rational:
 
     println(x1 * 2)
     println(2 * x1)
+
+    val half = new Rational(1, 2)
+    val third = new Rational(1, 3)
+
+    val value: Any = half < third
+    val value1: Any = half > third
+    println(value)
+    println(value1)
+    println()
+
 
 
 
