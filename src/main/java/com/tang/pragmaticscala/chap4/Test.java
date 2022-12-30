@@ -10,9 +10,9 @@ package com.tang.pragmaticscala.chap4;
 
 public class Test {
     public static void main(String[] args) {
-        Dude dude = new Dude("a","b");
-//        String firstName = dude.getPosiition();
-        System.out.println(dude.getFirstName());
+//        Dude dude = new Dude("a","b");
+////        String firstName = dude.getPosiition();
+//        System.out.println(dude.getFirstName());
 
 
     }

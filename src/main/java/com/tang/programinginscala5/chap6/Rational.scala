@@ -1,6 +1,8 @@
 package com.tang.programinginscala5.chap6
 
 
+import scala.concurrent.Future
+
 /**
  * @Classname Chap6Test
  * @Description TODO
@@ -122,6 +124,7 @@ object Rational:
 
     println(x1 * 2)
     println(2 * x1)
+    Future
 
     val half = new Rational(1, 2)
     val third = new Rational(1, 3)

@@ -14,7 +14,7 @@
     <name>programing-in-scala-5</name>
     <description>programing-in-scala-5</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>19</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -40,11 +40,11 @@
             <version>3.1.3</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.alchim31.maven/scala-maven-plugin -->
-        <dependency>
-            <groupId>net.alchim31.maven</groupId>
-            <artifactId>scala-maven-plugin</artifactId>
-            <version>4.7.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.alchim31.maven</groupId>-->
+<!--            <artifactId>scala-maven-plugin</artifactId>-->
+<!--            <version>4.7.1</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -58,12 +58,41 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>4.7.1</version>
+                <executions>
+                    <execution>
+                        <id>scala-compile-first</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>scala-test-compile</id>
+                        <phase>process-test-resources</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+<!--                    <source>1.8</source>-->
+<!--                    <target>1.8</target>-->
+                    <encoding>UTF-8</encoding>
+                </configuration>
             </plugin>
         </plugins>
-
-
     </build>
+
+
+
 
 </project>

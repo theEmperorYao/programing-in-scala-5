@@ -37,5 +37,6 @@ public class Trouble {
 //        ArrayList<Object> list2 = list;
 
         ArrayList list3 = list;
+        System.out.println("list3 = " + list3);
     }
 }

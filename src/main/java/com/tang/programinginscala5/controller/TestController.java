@@ -18,9 +18,9 @@ public class TestController {
     }
 
     public static void main(String[] args) {
-        var a = System.nanoTime();
+        long a = System.nanoTime();
         f();
-        var b = System.nanoTime();
+        long b = System.nanoTime();
         System.out.println(b - a);
     }
 

@@ -12,7 +12,10 @@ def workWithPets(pets: Array[Pet]): Unit = {}
 def playWithPets[T <: Pet](pets: Array[T]): Unit =
   println("Playing with pets: " + pets.mkString(", "))
 
-def copyPets[S, D >: S](fromPets: Array[S], toPets: Array[D]): Unit = {}
+def copyPets[S, D >: S](fromPets: Array[S], toPets: Array[D]): Unit = {
+
+}
+
 
 // +T 告诉 scala 允许协变
 class MyList[+T]

@@ -1,6 +1,6 @@
 package com.tang.programinginscala5.testjava;
 
-import com.tang.programinginscala5.chap6.Rational;
+//import com.tang.programinginscala5.chap6.Rational;
 
 /**
  * @Classname Chap7Test

@@ -17,5 +17,7 @@ object C:
 
     val person = new Person3()
     println(person)
+    val c = new TestABC
+    println(c)
 
   }

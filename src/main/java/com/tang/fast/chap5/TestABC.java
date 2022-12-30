@@ -1,5 +1,6 @@
 package com.tang.fast.chap5;
 
+
 /**
  * @Classname TestABC
  * @Description
@@ -9,11 +10,12 @@ package com.tang.fast.chap5;
 public class TestABC {
 
     public static void main(String[] args) {
+        String a = "";
 
         ABC abc = new ABC();
-        var age = abc.getAge();
+        int age = abc.getAge();
         abc.setName("aaa");
         System.out.println("abc.getName() = " + abc.getName());
-        
+////        
     }
 }
