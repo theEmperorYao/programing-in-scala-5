@@ -1,5 +1,7 @@
 package com.tang.programinginscala5.chap11
 
+import org.springframework.stereotype.Component
+
 /**
  * @Classname Philosophical
  * @Description
@@ -8,7 +10,7 @@ package com.tang.programinginscala5.chap11
  */
 trait Philosophical:
   def philosophize = "I consume memory,therefore I am!"
-
+@Component
 class Frog extends Animal, Philosophical, HasLegs :
   override def toString: String = "green"
 

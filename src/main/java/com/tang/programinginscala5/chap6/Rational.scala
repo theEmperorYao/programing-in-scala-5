@@ -1,6 +1,8 @@
 package com.tang.programinginscala5.chap6
 
 
+import org.springframework.stereotype.Component
+
 import scala.concurrent.Future
 
 /**
@@ -18,11 +20,13 @@ extension (x: Int)
 
 /**
  *
+ *
  * scala编译器将会采集这两个类参数，并创建一个主构造方法，接收同样的两个参数
  *
  * @param n 类参数
  * @param d
  */
+@Component
 class Rational(n: Int, d: Int) extends Ordered[Rational] :
 
   override def compare(that: Rational): Int =
