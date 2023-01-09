@@ -39,10 +39,13 @@ object SecondExample:
   class Coffee:
     val price: Double = 2.0
 
-  val cc = CreditCard()
-  val p = SimulatedPayments()
-  val cafe = Cafe()
-  val cup = cafe.buyCoffee(cc, p)
+
+  def main(args: Array[String]): Unit = {
+    val cc = CreditCard()
+    val p = SimulatedPayments()
+    val cafe = Cafe()
+    val cup = cafe.buyCoffee(cc, p)
+  }
 
 object ThirdExample:
 
@@ -56,7 +59,8 @@ object ThirdExample:
       val (coffees, charges) = purchases.unzip
       (coffees, charges.reduce((c1, c2) => c1.combine(c2)))
 
-  class CreditCard
+  class CreditCard:
+    override def toString: String = "俺是信用卡"
 
   case class Charge(cc: CreditCard, amount: Double):
     def combine(other: Charge): Charge =
@@ -65,8 +69,12 @@ object ThirdExample:
       else
         throw new Exception("Can't combine charges to different cards")
 
+    override def toString: String = s"CreditCard: $cc , amount: $amount"
+
   class Coffee:
     val price: Double = 2.0
+
+    override def toString: String = s"俺是陨石拿铁, price: $price"
 
   def coalesce(charges: List[Charge]): List[Charge] =
     charges.groupBy(_.cc).values.map(_.reduce(_.combine(_))).toList
