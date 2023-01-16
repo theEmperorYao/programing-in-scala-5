@@ -139,6 +139,11 @@ object Rational:
     println(value1)
     println()
 
+    val r1: Rational = Rational(10, 3)
+    val r2: Rational = Rational(10, 4)
+    val i = r1 >= r2
+    println(s"i= $i")
+
 
 
 
