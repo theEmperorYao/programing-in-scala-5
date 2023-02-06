@@ -144,6 +144,12 @@ object Rational:
     val i = r1 >= r2
     println(s"i= $i")
 
+    val r3: Rational = Rational(1, 2)
+    val r4: Rational = Rational(2, 3)
+
+    val bool: Boolean = r1 < r2
+
+
 
 
 

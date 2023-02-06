@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component
  */
 trait Philosophical:
   def philosophize = "I consume memory,therefore I am!"
-@Component
+
 class Frog extends Animal, Philosophical, HasLegs :
   override def toString: String = "green"
 
